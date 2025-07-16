@@ -6,6 +6,11 @@ body {
   padding: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .main {
   padding-bottom: 100px;
 }
@@ -29,8 +34,9 @@ header {
   align-items: center;
   background-color: #161616;
   color: white;
-  padding: 24px 100px;
+  padding: 24px 5vw;
   border-bottom: 2px solid rgb(210, 210, 210);
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -45,6 +51,7 @@ header {
   gap: 25px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .menu li a {
@@ -72,7 +79,6 @@ header {
   transform: scaleX(1);
 }
 
-/* Hero background */
 .hero {
   position: relative;
   width: 100%;
@@ -98,6 +104,8 @@ header {
   margin: 0;
   color: white;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 0 5vw;
+  box-sizing: border-box;
 }
 
 .desc {
@@ -105,12 +113,13 @@ header {
   color: #e0e0e0;
   margin-top: 10px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  padding: 0 5vw;
+  box-sizing: border-box;
 }
 
-/* ==== FOOTER ==== */
 .footer {
   background-color: #111;
-  padding: 50px 100px;
+  padding: 50px 5vw;
   color: #ccc;
   border-top: 2px solid rgb(210, 210, 210);
 }
@@ -196,7 +205,7 @@ header {
 }
 
 .project-section {
-  padding: 60px 100px;
+  padding: 60px 5vw;
 }
 
 .project-heading {
@@ -211,10 +220,8 @@ header {
 
 .parent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .project-card {
@@ -256,35 +263,7 @@ header {
   line-height: 1.4;
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 1024px) {
-  header {
-    padding: 20px 50px;
-  }
-
-  .title1 {
-    font-size: 50px;
-    padding: 0 50px;
-  }
-
-  .desc {
-    padding: 0 55px;
-    font-size: 18px;
-  }
-
-  .footer {
-    padding: 40px 50px;
-  }
-
-  .project-section {
-    padding: 50px 50px;
-  }
-
-  .parent {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* === RESPONSIVE FIXED === */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -295,21 +274,6 @@ header {
   .menu {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .title1 {
-    font-size: 40px;
-    line-height: 1.2;
-    padding: 0 30px;
-  }
-
-  .desc {
-    padding: 0 35px;
-    font-size: 16px;
-  }
-
-  .parent {
-    grid-template-columns: 1fr;
   }
 
   .footer-content {
@@ -323,28 +287,12 @@ header {
 }
 
 @media (max-width: 480px) {
-  .title1 {
-    font-size: 32px;
-  }
-
-  .desc {
-    font-size: 15px;
-  }
-
   .project-card img {
     height: 140px;
   }
 
-  .project-content h3 {
-    font-size: 16px;
-  }
-
-  .project-content p {
-    font-size: 13px;
-  }
-
   .footer {
-    padding: 30px 20px;
+    padding: 30px 5vw;
   }
 
   .footer-logo {

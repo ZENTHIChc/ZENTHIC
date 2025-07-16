@@ -2,9 +2,42 @@
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Portofolio Mahesha</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      html, body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+      }
+
+      .title1, .desc {
+        max-width: 100%;
+        word-wrap: break-word;
+        box-sizing: border-box;
+      }
+
+      header, .footer, .title1, .desc {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
+
+      @media (max-width: 768px) {
+        .title1, .desc {
+          padding-left: 4vw;
+          padding-right: 4vw;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .title1, .desc {
+          padding-left: 3vw;
+          padding-right: 3vw;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="main">
@@ -13,7 +46,7 @@
         <ul class="menu">
           <li><a href="#">Home</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="#footer1">Contak</a></li>
+          <li><a href="#footer1">Contact</a></li>
         </ul>
       </header>
 
@@ -53,20 +86,14 @@
 
           <div class="footer-column">
             <h4>Connect</h4>
-            <a href="#"
-              ><img
-                src="image/icons8-discord-24.png"
-                alt="Discord"
-                class="icon"
-              />Discord</a
-            >
-            <a href="https://github.com/ZENTHIChc"
-              ><img
-                src="image/icons8-github-24.png"
-                alt="GitHub"
-                class="icon"
-              />GitHub</a
-            >
+            <a href="#">
+              <img src="image/icons8-discord-24.png" alt="Discord" class="icon" />
+              Discord
+            </a>
+            <a href="https://github.com/ZENTHIChc">
+              <img src="image/icons8-github-24.png" alt="GitHub" class="icon" />
+              GitHub
+            </a>
           </div>
         </div>
       </div>
